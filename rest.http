@@ -1,1 +1,9 @@
+### Create
 GET http://localhost:5000/v1/users
+
+
+### Create
+POST http://localhost:5000/v1/users13
+
+### udpate
+PATCH  http://localhost:5000/v1/usersWW

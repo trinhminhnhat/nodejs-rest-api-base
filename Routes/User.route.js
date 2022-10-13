@@ -1,10 +1,17 @@
 const express = require('express');
 const route = express.Router();
 
-route.get('/users', (req, res, next) => {
+route
+.get('/users', (req, res, next) => {
+    a
     res.json({
         application: 'tesst',
-        tesst: 123,
+        test: 123,
+    });
+})
+.post('/users', (req, res, next) => {
+    res.json({
+        AS: 'post',
     });
 });
 
