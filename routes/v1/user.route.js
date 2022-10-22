@@ -3,10 +3,9 @@ const route = express.Router();
 
 route
 .get('/users', (req, res, next) => {
-    a
     res.json({
-        application: 'tesst',
-        test: 123,
+        apiVersion: 'v1',
+        data: 1,
     });
 })
 .post('/users', (req, res, next) => {
