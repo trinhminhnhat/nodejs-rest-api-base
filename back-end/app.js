@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const helmet = require('helmet');
+const cors = require('cors')
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const createError = require('http-errors');
@@ -12,6 +13,11 @@ const logEvents = require('./helpers/logEvents');
 
 app.use(helmet());
 app.use(morgan('common'));
+
+app.use(cors({
+    "origin": 'http://127.0.0.1:5500',
+    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+}));
 
 // db.connect();
 // mongoose.connect('mongodb://127.0.0.1:27017', (err) => {

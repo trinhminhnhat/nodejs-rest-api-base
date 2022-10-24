@@ -12,8 +12,7 @@
             await fetch('http://localhost:5000/v1/users')
                 .then(response => response.json())
                 .then(data => {
-                    const responseData = JSON.parse(data);
-                    console.log('responseData: ', responseData);
+                    console.log('data: ', data);
                 })
         };
 

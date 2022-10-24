@@ -10,7 +10,8 @@ route
 })
 .post('/users', (req, res, next) => {
     res.json({
-        AS: 'post',
+        status: 201,
+        message: 'Store user successfully'
     });
 });
 
