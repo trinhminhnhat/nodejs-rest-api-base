@@ -1,9 +1,0 @@
-### Api get user version 1
-GET http://localhost:5000/v1/users
-
-
-### Api get user version 2
-GET http://localhost:5000/v2/users
-
-### Test api not found
-POST http://localhost:5000/v1/users13

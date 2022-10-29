@@ -7,11 +7,13 @@ const mongoose = require('mongoose');
 const createError = require('http-errors');
 const { v4: uuid } = require('uuid');
 
-const db = require('./config/db');
-const routes = require('./routes');
-const logEvents = require('./helpers/logEvents');
+// const db = require('../config/db');
+const routes = require('./routes.index');
+const { logEvents } = require('./v1/utils');
 
+// Secure your Express apps by setting various HTTP headers
 app.use(helmet());
+// HTTP request logger middleware
 app.use(morgan('common'));
 
 app.use(cors({

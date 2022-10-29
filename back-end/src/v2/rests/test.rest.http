@@ -1,0 +1,4 @@
+@DEV_BASE_URL = {{$dotenv DEV_BASE_URL}}
+
+### Api get user version 2
+GET {{DEV_BASE_URL}}/v2/users

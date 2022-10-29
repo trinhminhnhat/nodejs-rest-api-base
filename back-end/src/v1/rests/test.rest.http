@@ -1,0 +1,7 @@
+@DEV_BASE_URL = {{$dotenv DEV_BASE_URL}}
+
+### Api get user version 1
+GET {{DEV_BASE_URL}}/v1/users
+
+### Test api not found
+POST http://localhost:5000/v1/users13
