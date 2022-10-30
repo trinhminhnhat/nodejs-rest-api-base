@@ -3,11 +3,13 @@ const app = express();
 const helmet = require('helmet');
 const cors = require('cors')
 const morgan = require('morgan');
-const mongoose = require('mongoose');
 const createError = require('http-errors');
 const { v4: uuid } = require('uuid');
 
-// const db = require('../config/db');
+// Init databases
+// require('./databases/init.mongodb')
+require('./databases/init.redis')
+
 const routes = require('./routes.index');
 const { logEvents } = require('./v1/utils');
 
@@ -20,15 +22,6 @@ app.use(cors({
     "origin": 'http://127.0.0.1:5500',
     "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
 }));
-
-// db.connect();
-// mongoose.connect('mongodb://127.0.0.1:27017', (err) => {
-//     if (err) {
-//         console.error('error: ', err);
-//     } else {
-//         console.log('Database connection successful: ', err);
-//     }
-// });
 
 app.use(routes);
 
