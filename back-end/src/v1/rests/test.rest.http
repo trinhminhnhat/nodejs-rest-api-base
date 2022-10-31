@@ -5,3 +5,23 @@ GET {{DEV_BASE_URL}}/v1/users
 
 ### Test api not found
 POST http://localhost:5000/v1/users13
+
+### Redis set key
+PUT http://localhost:5000/v1/redis/set-key
+Content-Type: application/json
+
+{
+    "key": "u:1",
+    "payload": {
+        "uid": 1,
+        "name": "nhattm"
+    }
+}
+
+### Redis get key
+POST http://localhost:5000/v1/redis/get-key
+Content-Type: application/json
+
+{
+    "key": "u:1"
+}
