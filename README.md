@@ -13,13 +13,14 @@
     ```bash
     > cd back-end
     > cp .env.example .env
+    > npm install
     > npm start
     ```
 
 - Frontend
 
-    1. cd front-end
-    2. use `Live Server` extension in VS Code to test api with CORS
+  - cd front-end
+  - use `Live Server` extension in VS Code to test api with CORS
 
 ## Author
 
